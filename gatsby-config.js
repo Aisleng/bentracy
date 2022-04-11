@@ -1,43 +1,55 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "Ben Tracy",
+    title: 'Ben Tracy | Mortgages Made Personal',
+    siteUrl: 'https://www.bentracy.com',
+    description:
+      'A mortgage touches every part of your financial life. It\'s difficult to separate a mortgage from your kids college tuition, your dream car, or even your retirement.',
+    keywords: 'ben tracy, mortgage, broker, mortgage broker',
+    author: '@bentracy',
+    pathname: 'https://www.bentracy.com',
+    region: 'Louisville',
+    position: '38.2034039,-85.7799142',
+    icon: 'src/images/favicons/apple-touch-icon-180x180.png',
+    youtubeUrl: 'https://www.youtube.com/channel/UCT9SMiQFeyZQBuhwVjOuzvg',
   },
   plugins: [
-    "gatsby-plugin-styled-components",
-    "gatsby-plugin-image",
+    'gatsby-plugin-image',
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: 'gatsby-plugin-tsconfig-paths',
       options: {
-        trackingId: "G-05R61XGPVM",
+        configFile: `${__dirname}/jsconfig.json`,
       },
     },
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-google-tagmanager',
       options: {
-        icon: "src/images/icon.png",
+        id: 'G-05R61XGPVM',
       },
     },
-    "gatsby-plugin-mdx",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    'gatsby-plugin-react-helmet',
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: "images",
-        path: "./src/images/",
+        icon: 'src/images/icon.png',
       },
-      __key: "images",
+    },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: './src/images/',
+      },
+      __key: 'images',
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        name: 'pages',
+        path: './src/pages/',
       },
-      __key: "pages",
+      __key: 'pages',
     },
   ],
 };
